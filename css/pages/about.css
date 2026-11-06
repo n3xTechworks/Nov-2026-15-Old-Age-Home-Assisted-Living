@@ -1,0 +1,16 @@
+/* about: page-specific styles (owned by the about page builder). */
+
+/* Our story: two equal-height columns, image fills its column */
+.about-split { align-items: stretch; }
+.about-split .split-body { justify-content: center; }
+.about-split--second { margin-top: var(--s8); }
+@media (min-width: 900px) {
+  .about-split .split-media { aspect-ratio: auto; min-height: 420px; }
+}
+
+/* Single resident testimonial, centred */
+.about-quote { grid-template-columns: minmax(0, 1fr); max-width: 760px; margin-inline: auto; }
+@media (min-width: 1024px) { .about-quote { grid-template-columns: minmax(0, 1fr); max-width: 760px; } }
+
+/* cards whose last row is not a link still need bottom breathing room */
+#team .card > :last-child, #standards .card > :last-child { margin-bottom: 26px; }

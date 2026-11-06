@@ -1,0 +1,17 @@
+/* home-2: page-specific styles (owned by the home-2 page builder). */
+
+/* "A day at Thymewood": time line sits on the last row */
+.day-cards .card > :last-child { margin-bottom: 26px; }
+
+/* Gallery: fill holes left by the tall/wide tiles; captions anchored to the top so they line up across a row */
+.home2-gallery { grid-auto-flow: dense; }
+.home2-gallery .gallery-item figcaption { bottom: auto; top: 10px; }
+
+/* Stats inside the deep green band */
+.band .home2-stats { color: var(--band-ink); font-size: 1.25rem; }
+.band .home2-stats strong { font-family: var(--f-head); font-size: 1.75rem; color: var(--band-accent); margin-inline-end: 4px; }
+.band .home2-stats li + li::before { background: var(--band-accent); }
+.band .note { color: var(--band-muted); }
+@media (max-width: 639.98px) {
+  .band .home2-stats li { background: var(--band-card); border-color: var(--band-line); }
+}

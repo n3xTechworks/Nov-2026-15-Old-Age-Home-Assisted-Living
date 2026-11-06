@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Care Services | Thymewood Garden Residence</title>
+  <meta name="description" content="Nursing care, memory care, help with daily living, therapy and respite stays at Thymewood Garden Residence.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('tw-theme');
+        var d = localStorage.getItem('tw-dir');
+        if (t !== 'dark' && t !== 'light') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('dir', d === 'rtl' ? 'rtl' : 'ltr');
+        if (!navigator.webdriver && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&amp;family=Literata:opsz,wght@7..72,500;7..72,600&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/blood-pressure-check-1600.webp" imagesrcset="images/blood-pressure-check-800.webp 800w, images/blood-pressure-check-1600.webp 1600w, images/blood-pressure-check-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/care-services.css">
+  <script defer src="js/validation.js"></script>
+  <script defer src="js/site.js"></script>
+  <script defer src="js/pages/care-services.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Thymewood Garden Residence, home">
+          <svg class="brand-mark" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false">
+            <circle cx="24" cy="24" r="24" class="mark-bg"/>
+            <path d="M24 37V20" class="mark-stem"/>
+            <path d="M24 29c-7.5 0-11-4.6-11-11 6.4 0 11 3.6 11 11z" class="mark-leaf"/>
+            <path d="M24 24.5c0-7.4 3.8-11.5 11-11.5 0 6.6-4 11.5-11 11.5z" class="mark-leaf2"/>
+            <circle cx="24" cy="11.5" r="2.6" class="mark-sun"/>
+          </svg>
+          <span class="brand-text"><span class="brand-name">Thymewood</span><span class="brand-tag">Garden Residence</span></span>
+        </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="has-sub">
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="home-sub">Home <svg class="chev" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <ul class="submenu" id="home-sub"><li><a href="index.html">Home 1</a></li><li><a href="home-2.html">Home 2</a></li></ul>
+          </li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+            <li><a class="nav-link" href="care-services.html" aria-current="page">Care Services</a></li>
+            <li><a class="nav-link" href="blog.html">Blog</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="ctl ctl-icon" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><svg class="i-moon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <button class="ctl ctl-icon" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span class="dir-txt" aria-hidden="true"><span class="d-to-rtl">RTL</span><span class="d-to-ltr">LTR</span></span></button>
+        <a class="ctl btn btn-primary" href="contact.html#book" data-nav-cta>Book a Visit</a>
+      </div>
+
+      <button class="ctl ctl-icon menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg class="i-menu" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <nav class="container" aria-label="Mobile">
+        <p class="mm-label">Home</p>
+        <ul class="mm-list mm-sub"><li><a href="index.html">Home 1</a></li><li><a href="home-2.html">Home 2</a></li></ul>
+        <ul class="mm-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="care-services.html" aria-current="page">Care Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <img class="page-hero-bg" src="images/blood-pressure-check-1600.webp" srcset="images/blood-pressure-check-800.webp 800w, images/blood-pressure-check-1600.webp 1600w, images/blood-pressure-check-2000.webp 2000w" sizes="100vw" width="1600" height="1066" alt="A nurse gently checking an older resident's blood pressure with a cuff and dial gauge" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="container page-hero-content">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Care Services</span></nav>
+        <h1 id="page-title">Care that follows the person, not the routine</h1>
+        <p>From a little help in the mornings to round-the-clock nursing and memory care, every plan is written with your parent and reviewed with you.</p>
+      </div>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="section" id="overview" aria-labelledby="overview-title">
+      <div class="container">
+        <header class="intro intro--center">
+          <p class="eyebrow">Our care services</p>
+          <h2 id="overview-title">Five kinds of care, one familiar team</h2>
+          <p>Most residents use more than one of these over the years. Care plans are written with your parent, shared with you and changed whenever needs change.</p>
+        </header>
+        <div class="cards cards--3 svc-cards">
+          <article class="card card--rows-5">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/><path d="M12 9v5M9.5 11.5h5"/></svg></span>
+            <h3 class="card-title">Nursing care</h3>
+            <p class="card-text">Registered nurses on site day and night for medicines, wound care and long-term conditions.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Nurses 24/7</li></ul>
+            <a class="link" href="#nursing">About nursing care <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card card--rows-5">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4a4 4 0 0 0-4 4 3.5 3.5 0 0 0-1 6.5A3.5 3.5 0 0 0 9 20h1V4z"/><path d="M15 4a4 4 0 0 1 4 4 3.5 3.5 0 0 1 1 6.5A3.5 3.5 0 0 1 15 20h-1V4z"/></svg></span>
+            <h3 class="card-title">Memory care</h3>
+            <p class="card-text">Calm routines, reminiscence and a dementia-trained team in rooms that are easy to find your way around.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg>16-person wing</li></ul>
+            <a class="link" href="#memory-care">About memory care <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card card--rows-5">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span>
+            <h3 class="card-title">Daily living support</h3>
+            <p class="card-text">A hand with washing, dressing and getting about, only where it is wanted, so independence lasts.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>A named key carer</li></ul>
+            <a class="link" href="#daily-living">About daily support <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card card--rows-5">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v4M11 15l-1-5 4-2 2 4h3M10 10l-3 2"/></svg></span>
+            <h3 class="card-title">Therapy &amp; mobility</h3>
+            <p class="card-text">Physiotherapy, falls prevention and chair exercise to rebuild strength after illness or a hospital stay.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>5 days a week</li></ul>
+            <a class="link" href="#therapy">About therapy <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card card--rows-5">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M7 2v3M11 2v3"/></svg></span>
+            <h3 class="card-title">Respite stays</h3>
+            <p class="card-text">Short stays from two weeks, so a family carer can rest, recover from an operation or take a holiday.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg>From 2 weeks</li></ul>
+            <a class="link" href="#respite">About respite stays <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card card--rows-5">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><path d="M12 17.5v.01"/></svg></span>
+            <h3 class="card-title">Not sure what is needed?</h3>
+            <p class="card-text">Many families start here. Read the questions others ask us about fees, visiting and moving in.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Free, no-pressure advice</li></ul>
+            <a class="link" href="contact.html#faq">Read the FAQs <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ I. NURSING ============ -->
+    <section class="section section--tint svc" id="nursing" aria-labelledby="nursing-title">
+      <div class="container split">
+        <div class="split-media"><img src="images/doctor-check-up-conversation-800.webp" width="800" height="521" alt="A doctor talking warmly with an older patient during a check-up" loading="lazy" decoding="async"></div>
+        <div class="split-body">
+          <p class="eyebrow">Nursing care</p>
+          <h2 id="nursing-title">Registered nurses, day and night</h2>
+          <p>Our nurses know each resident's history, so changes are noticed early and handled calmly. A local GP visits every Wednesday, and we arrange dentists, opticians and chiropodists on site.</p>
+          <h3 class="svc-sub">What is included</h3>
+          <ul class="checklist">
+            <li>Medicines managed and given by nurses</li>
+            <li>Wound, diabetes and catheter care</li>
+            <li>Weekly GP round and hospital liaison</li>
+          </ul>
+          <p class="svc-for"><strong>Who it is for:</strong> people living with long-term conditions, frailty or recovery needs who want a nurse close by.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ II. MEMORY CARE ============ -->
+    <section class="section svc" id="memory-care" aria-labelledby="memory-title">
+      <div class="container split split--reverse">
+        <div class="split-media"><img src="images/caregiver-colouring-with-couple-800.webp" width="800" height="566" alt="A caregiver colouring pictures with an older couple at a table" loading="lazy" decoding="async"></div>
+        <div class="split-body">
+          <p class="eyebrow">Memory care</p>
+          <h2 id="memory-title">Gentle support for memory loss</h2>
+          <p>The Willow wing is a calm, homely space for sixteen people living with dementia. Colour-coded doors, a circular garden walk and familiar routines help each day feel safe and recognisable.</p>
+          <h3 class="svc-sub">What is included</h3>
+          <ul class="checklist">
+            <li>Dementia-trained carers on every shift</li>
+            <li>Life-story work and memory boxes</li>
+            <li>Music, sensory and reminiscence sessions</li>
+          </ul>
+          <p class="svc-for"><strong>Who it is for:</strong> people with Alzheimer's or other dementias who need patience, structure and a secure garden.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ III. DAILY LIVING ============ -->
+    <section class="section section--tint svc" id="daily-living" aria-labelledby="daily-title">
+      <div class="container split">
+        <div class="split-media"><img src="images/carer-wellbeing-chat-800.webp" width="800" height="566" alt="A carer sitting and chatting with an older woman about how she is feeling" loading="lazy" decoding="async"></div>
+        <div class="split-body">
+          <p class="eyebrow">Daily living support</p>
+          <h2 id="daily-title">Help with the everyday, at your own pace</h2>
+          <p>Each resident has a named key carer who learns how they like to start the day. We help with as much or as little as is wanted, and step back as confidence returns.</p>
+          <h3 class="svc-sub">What is included</h3>
+          <ul class="checklist">
+            <li>Washing, bathing and dressing support</li>
+            <li>Help to meals, the garden and activities</li>
+            <li>Laundry, housekeeping and appointments</li>
+          </ul>
+          <p class="svc-for"><strong>Who it is for:</strong> people who are mostly independent but find some parts of the day harder than they used to.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IV. THERAPY ============ -->
+    <section class="section svc" id="therapy" aria-labelledby="therapy-title">
+      <div class="container split split--reverse">
+        <div class="split-media"><img src="images/mobility-walk-with-rollator-800.webp" width="800" height="534" alt="An older woman walking with a rollator alongside a supportive helper" loading="lazy" decoding="async"></div>
+        <div class="split-body">
+          <p class="eyebrow">Therapy &amp; mobility</p>
+          <h2 id="therapy-title">Physiotherapy that keeps people steady</h2>
+          <p>Our in-house physiotherapist sees residents one to one and runs chair exercise and balance classes. After a fall or a hospital stay, we set clear goals and celebrate each step back.</p>
+          <h3 class="svc-sub">What is included</h3>
+          <ul class="checklist">
+            <li>Mobility assessment within the first week</li>
+            <li>One-to-one physio and hydrotherapy</li>
+            <li>Falls prevention and walking aids fitted</li>
+          </ul>
+          <p class="svc-for"><strong>Who it is for:</strong> anyone recovering from illness, surgery or a fall, or keen to stay strong and confident on their feet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ V. RESPITE ============ -->
+    <section class="section section--tint svc" id="respite" aria-labelledby="respite-title">
+      <div class="container split">
+        <div class="split-media"><img src="images/cafe-outing-with-friends-800.webp" width="800" height="533" alt="A group of older friends enjoying coffee together on a cafe outing" loading="lazy" decoding="async"></div>
+        <div class="split-body">
+          <p class="eyebrow">Respite stays</p>
+          <h2 id="respite-title">Short stays that give everyone a rest</h2>
+          <p>A respite stay is a full Thymewood welcome for a few weeks: a furnished suite, the same care and every activity, while family carers recharge. Many guests treat it as a gentle trial before moving in.</p>
+          <h3 class="svc-sub">What is included</h3>
+          <ul class="checklist">
+            <li>Furnished suite, meals and all activities</li>
+            <li>Care plan agreed before arrival</li>
+            <li>Stays from two weeks, booked ahead</li>
+          </ul>
+          <p class="svc-for"><strong>Who it is for:</strong> people whose family carer needs a break, or who are home from hospital and not quite ready to be alone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW CARE BEGINS (band) ============ -->
+    <section class="section band" id="how-care-begins" aria-labelledby="steps-title">
+      <div class="container">
+        <header class="intro intro--center">
+          <p class="eyebrow">How care begins</p>
+          <h2 id="steps-title">Five unhurried steps from first call to settled in</h2>
+          <p>Nothing is rushed. Most families take two to four weeks from the first visit to moving day, and we are with you at every stage.</p>
+        </header>
+        <ol class="roman-list svc-steps">
+          <li><span class="numeral" aria-hidden="true">I</span><h3>A free care assessment</h3><p>Our Head of Nursing visits your parent at home or in hospital to listen, ask questions and understand what matters to them.</p></li>
+          <li><span class="numeral" aria-hidden="true">II</span><h3>A care plan written together</h3><p>We write the plan with your parent and with you: routines, health needs, food, faith and the little things that make a day good.</p></li>
+          <li><span class="numeral" aria-hidden="true">III</span><h3>A gentle move-in day</h3><p>The suite is ready with their own things in place, the key carer is there to greet them, and family are welcome to stay for supper.</p></li>
+          <li><span class="numeral" aria-hidden="true">IV</span><h3>Reviews at six weeks, then monthly</h3><p>We sit down together to see what is working and change the plan as needs change, never waiting for a problem.</p></li>
+          <li><span class="numeral" aria-hidden="true">V</span><h3>Regular updates for family</h3><p>A monthly letter from the key carer, a call whenever you want one and an open door for lunch, so you always know how they are.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CARE TEAM ============ -->
+    <section class="section" id="care-team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="intro intro--center">
+          <p class="eyebrow">The care team</p>
+          <h2 id="team-title">The people your parent will see every day</h2>
+          <p>Our team of 58 stays with us for an average of nine years, so faces become familiar and trust has time to grow.</p>
+        </header>
+        <div class="cards cards--4">
+          <article class="card card--rows-4">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg></span>
+            <h3 class="card-title">Registered nurses</h3>
+            <p class="card-text">Led by Sofia Reyes, our nurses plan care, manage medicines and work closely with the visiting GP.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg>12 nurses</li></ul>
+          </article>
+          <article class="card card--rows-4">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>
+            <h3 class="card-title">Care assistants</h3>
+            <p class="card-text">Small, steady teams on each floor, so every resident has a named key carer who knows them well.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg>32 carers</li></ul>
+          </article>
+          <article class="card card--rows-4">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg></span>
+            <h3 class="card-title">Physiotherapy</h3>
+            <p class="card-text">Our physiotherapist and assistant run one-to-one sessions, balance classes and the hydrotherapy pool.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg>2 therapists</li></ul>
+          </article>
+          <article class="card card--rows-4">
+            <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span>
+            <h3 class="card-title">Activities team</h3>
+            <p class="card-text">Hannah Doyle and her team plan the week with residents, from choir and crafts to outings in town.</p>
+            <ul class="meta"><li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg>4 coordinators</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section section--sand" id="care-cta" aria-labelledby="care-cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <p class="eyebrow">Talk to us</p>
+          <h2 id="care-cta-title">Let us help you work out the right care</h2>
+          <p>Come for tea, meet the nurses and see the Willow wing. Daniel will answer every question, with no pressure to decide.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="contact.html#book">Book a Visit</a>
+            <a class="btn btn-secondary btn-lg" href="tel:+441632960412">Call <span class="ltr-num">01632 960 412</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="f-brand">
+        <a class="brand" href="index.html" aria-label="Thymewood Garden Residence, home">
+          <svg class="brand-mark" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false">
+            <circle cx="24" cy="24" r="24" class="mark-bg"/>
+            <path d="M24 37V20" class="mark-stem"/>
+            <path d="M24 29c-7.5 0-11-4.6-11-11 6.4 0 11 3.6 11 11z" class="mark-leaf"/>
+            <path d="M24 24.5c0-7.4 3.8-11.5 11-11.5 0 6.6-4 11.5-11 11.5z" class="mark-leaf2"/>
+            <circle cx="24" cy="11.5" r="2.6" class="mark-sun"/>
+          </svg>
+          <span class="brand-text"><span class="brand-name">Thymewood</span><span class="brand-tag">Garden Residence</span></span>
+        </a>
+        <p class="f-desc">Assisted living, nursing and memory care around two acres of walled gardens, for 64 residents and the families who love them.</p>
+        <ul class="f-contact">
+          <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>14 Orchard Lane, Stamford PE9 2TW</span></li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+441632960412"><span class="ltr-num">01632 960 412</span></a></li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:hello@thymewood.example">hello@thymewood.example</a></li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Visiting every day, 9:00 to 20:00</span></li>
+        </ul>
+        <form class="newsletter" data-validate novalidate data-success-message="Thank you. The next garden letter is on its way to you.">
+          <label for="nl-email">Our monthly garden letter</label>
+          <div class="nl-row">
+            <input id="nl-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+          <p class="form-success" data-form-success role="status" hidden><span data-success-text>Thank you for subscribing.</span></p>
+        </form>
+      </div>
+
+      <nav class="f-col" aria-labelledby="f-quick">
+        <h2 id="f-quick">Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="home-2.html">Home 2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="care-services.html">Care Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="f-col" aria-labelledby="f-care">
+        <h2 id="f-care">Care services</h2>
+        <ul>
+          <li><a href="care-services.html#nursing">Nursing care</a></li>
+          <li><a href="care-services.html#memory-care">Memory care</a></li>
+          <li><a href="care-services.html#daily-living">Help with daily living</a></li>
+          <li><a href="care-services.html#therapy">Physiotherapy</a></li>
+          <li><a href="care-services.html#respite">Respite stays</a></li>
+        </ul>
+      </nav>
+      <nav class="f-col" aria-labelledby="f-fac">
+        <h2 id="f-fac">Facilities</h2>
+        <ul>
+          <li><a href="facilities.html#suites">Garden suites</a></li>
+          <li><a href="facilities.html#dining">Dining room</a></li>
+          <li><a href="facilities.html#gardens">Walled gardens</a></li>
+          <li><a href="facilities.html#activities">Activities</a></li>
+          <li><a href="facilities.html#wellness">Wellness &amp; salon</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Thymewood Garden Residence. A fictional residence for demonstration.</p>
+      <ul class="legal-links"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul>
+      <ul class="social" aria-label="Thymewood on social media">
+        <li><a href="https://www.facebook.com/" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v7h4v-7h3l1-4h-4V8z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></a></li>
+        <li><a href="https://www.youtube.com/" aria-label="YouTube" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

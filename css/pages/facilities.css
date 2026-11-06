@@ -1,0 +1,42 @@
+/* facilities: page-specific styles (owned by the facilities page builder). */
+
+/* Two-photo strip above the room cards */
+.fac-pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; margin-bottom: var(--s7); }
+@media (min-width: 768px) { .fac-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.fac-photo { margin: 0; }
+.fac-photo img { width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: cover; border-radius: var(--r-lg); box-shadow: var(--shadow); }
+.fac-photo figcaption { margin-top: 12px; color: var(--muted); font-size: var(--fs-small); text-align: center; }
+
+/* Room cards have no image: one full-width card per row at tablet widths
+   (the shared 3-up tablet layout reserves a media column). */
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  .room-cards .card { grid-template-columns: minmax(0, 1fr); }
+  .room-cards .card > * { grid-column: 1; }
+}
+.room-cards .meta { flex-wrap: wrap; }
+
+/* Activity cards with tall frames: keep a sensible height on wide screens */
+@media (min-width: 1024px) { .fac-tall .card-media--tall { aspect-ratio: 4 / 4.4; } }
+
+/* Quiet room: very wide photo in a wide frame with text beside it */
+.fac-quiet {
+  display: grid; grid-template-columns: minmax(0, 1fr); margin-top: 28px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow);
+}
+.fac-quiet-media { aspect-ratio: 20 / 9; overflow: hidden; }
+.fac-quiet-media img { width: 100%; height: 100%; object-fit: cover; }
+.fac-quiet-body { padding: 28px; display: flex; flex-direction: column; gap: 10px; justify-content: center; }
+.fac-quiet-body p { color: var(--muted); }
+@media (min-width: 900px) {
+  .fac-quiet { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+  .fac-quiet-media { aspect-ratio: auto; min-height: 280px; }
+  .fac-quiet-body { padding: 36px; }
+}
+
+/* Everything included: two-column checklist in the band */
+.fac-included { max-width: 880px; margin-inline: auto; gap: 14px 40px; }
+@media (min-width: 768px) { .fac-included { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.band .fac-included li { color: var(--band-ink); }
+
+/* Cards whose last row is a meta line or price need bottom breathing room */
+.card > .meta:last-child, .card > .price:last-child { margin-bottom: 26px; }

@@ -1,0 +1,23 @@
+/* care-services: page-specific styles (owned by the care-services page builder). */
+
+/* Overview: six icon cards. 3 x 2 on desktop, 2 x 3 at tablet, stacked on phones. */
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  .svc-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .svc-cards .card { grid-row: span var(--rows); grid-template-rows: subgrid; grid-template-columns: minmax(0, 1fr); }
+  .svc-cards .card > * { grid-column: 1; }
+}
+
+/* Five service sections share one identical layout (same frame size) */
+.svc .split-media { aspect-ratio: 4 / 3; }
+.svc .split-body h2 { max-width: 20ch; }
+.svc-sub { font-size: 1.125rem; margin-top: var(--s2); }
+.svc .checklist { margin-top: 0; }
+.svc-for { padding: 14px 18px; border-inline-start: 4px solid var(--leaf); background: var(--surface); border-radius: var(--r-sm); }
+.svc .split-body > .svc-for { color: var(--ink); }
+
+/* How care begins: five steps in one centred column (no orphan fifth card) */
+.svc-steps { max-width: 860px; }
+@media (min-width: 900px) { .svc-steps { grid-template-columns: minmax(0, 1fr); } }
+
+/* Cards whose last row is a meta line or price need bottom breathing room */
+.card > .meta:last-child, .card > .price:last-child { margin-bottom: 26px; }

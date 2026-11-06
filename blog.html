@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | The Thymewood journal</title>
+  <meta name="description" content="Practical guidance for families and everyday stories from the residents and team at Thymewood Garden Residence.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('tw-theme');
+        var d = localStorage.getItem('tw-dir');
+        if (t !== 'dark' && t !== 'light') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('dir', d === 'rtl' ? 'rtl' : 'ltr');
+        if (!navigator.webdriver && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&amp;family=Literata:opsz,wght@7..72,500;7..72,600&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/tea-tray-with-journal-and-teapot-1600.webp" imagesrcset="images/tea-tray-with-journal-and-teapot-800.webp 800w, images/tea-tray-with-journal-and-teapot-1600.webp 1600w, images/tea-tray-with-journal-and-teapot-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/blog.css">
+  <script defer src="js/validation.js"></script>
+  <script defer src="js/site.js"></script>
+  <script defer src="js/pages/blog.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Thymewood Garden Residence, home">
+          <svg class="brand-mark" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false">
+            <circle cx="24" cy="24" r="24" class="mark-bg"/>
+            <path d="M24 37V20" class="mark-stem"/>
+            <path d="M24 29c-7.5 0-11-4.6-11-11 6.4 0 11 3.6 11 11z" class="mark-leaf"/>
+            <path d="M24 24.5c0-7.4 3.8-11.5 11-11.5 0 6.6-4 11.5-11 11.5z" class="mark-leaf2"/>
+            <circle cx="24" cy="11.5" r="2.6" class="mark-sun"/>
+          </svg>
+          <span class="brand-text"><span class="brand-name">Thymewood</span><span class="brand-tag">Garden Residence</span></span>
+        </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="has-sub">
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="home-sub">Home <svg class="chev" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <ul class="submenu" id="home-sub"><li><a href="index.html">Home 1</a></li><li><a href="home-2.html">Home 2</a></li></ul>
+          </li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="facilities.html">Facilities</a></li>
+            <li><a class="nav-link" href="care-services.html">Care Services</a></li>
+            <li><a class="nav-link" href="blog.html" aria-current="page">Blog</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="ctl ctl-icon" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><svg class="i-moon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <button class="ctl ctl-icon" type="button" data-dir-toggle aria-label="Switch to right-to-left layout" aria-pressed="false"><span class="dir-txt" aria-hidden="true"><span class="d-to-rtl">RTL</span><span class="d-to-ltr">LTR</span></span></button>
+        <a class="ctl btn btn-primary" href="contact.html#book" data-nav-cta>Book a Visit</a>
+      </div>
+
+      <button class="ctl ctl-icon menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg class="i-menu" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <nav class="container" aria-label="Mobile">
+        <p class="mm-label">Home</p>
+        <ul class="mm-list mm-sub"><li><a href="index.html">Home 1</a></li><li><a href="home-2.html">Home 2</a></li></ul>
+        <ul class="mm-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="care-services.html">Care Services</a></li>
+          <li><a href="blog.html" aria-current="page">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <img class="page-hero-bg" src="images/tea-tray-with-journal-and-teapot-1600.webp" srcset="images/tea-tray-with-journal-and-teapot-800.webp 800w, images/tea-tray-with-journal-and-teapot-1600.webp 1600w, images/tea-tray-with-journal-and-teapot-2000.webp 2000w" sizes="100vw" width="1600" height="1067" alt="A journal, a cup of tea and a brown teapot on a small round side table" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="container page-hero-content">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Blog</span></nav>
+        <h1 id="page-title">The Thymewood journal</h1>
+        <p>Practical guidance for families, and everyday stories from our residents, nurses, chefs and gardeners.</p>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED ============ -->
+    <section class="section" id="featured" aria-labelledby="post-1-title">
+      <div class="container">
+        <article class="featured blog-card" id="post-1">
+          <div class="featured-media"><img class="blog-cover" src="images/moving-boxes-and-houseplants-800.webp" srcset="images/moving-boxes-and-houseplants-800.webp 800w, images/moving-boxes-and-houseplants-1600.webp 1600w" sizes="(min-width: 1024px) 640px, 100vw" width="800" height="530" alt="Stacked cardboard moving boxes among houseplants in a sunny room" loading="lazy" decoding="async"></div>
+          <div class="featured-body">
+            <p class="eyebrow">Featured article</p>
+            <div class="card-kicker"><span class="badge">Family guide</span><time datetime="2026-10-14">14 Oct 2026</time></div>
+            <h2 class="featured-title" id="post-1-title">Settling in: a gentle guide to the first month</h2>
+            <p class="featured-text">What to bring, when to visit and how to help your parent feel at home, from the nurse who welcomes every new resident. A calm, honest walk through the first four weeks, written for the family as much as for the person moving in.</p>
+            <div class="author">
+              <img class="author-photo" src="images/portrait-nurse-navy-scrubs-160.webp" width="160" height="160" alt="Portrait of Carmen Ruiz" loading="lazy" decoding="async">
+              <span class="author-text"><span class="author-name">Carmen Ruiz</span><span class="author-role">Admissions &amp; Settling-in Nurse</span></span>
+            </div>
+            <a class="btn btn-secondary" href="#post-1" data-open-post="post-1" aria-haspopup="dialog">Read article <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ LATEST ============ -->
+    <section class="section section--tint" id="latest" aria-labelledby="latest-title">
+      <div class="container">
+        <header class="intro intro--center">
+          <p class="eyebrow">More from the journal</p>
+          <h2 id="latest-title">Stories from the house and garden</h2>
+          <p>Written by the people who live and work here: our chef, our nurses, our activities team and two residents with plenty to say.</p>
+        </header>
+        <div class="chips" role="group" aria-label="Filter articles by topic">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All topics</button>
+          <button class="chip" type="button" data-filter="Staying active" aria-pressed="false">Staying active</button>
+          <button class="chip" type="button" data-filter="Resident voices" aria-pressed="false">Resident voices</button>
+          <button class="chip" type="button" data-filter="Nutrition" aria-pressed="false">Nutrition</button>
+          <button class="chip" type="button" data-filter="Memory care" aria-pressed="false">Memory care</button>
+          <button class="chip" type="button" data-filter="Staying connected" aria-pressed="false">Staying connected</button>
+          <button class="chip" type="button" data-filter="Outings" aria-pressed="false">Outings</button>
+        </div>
+        <p class="chips-status" data-filter-status role="status" aria-live="polite">Showing all 6 articles</p>
+        <div class="cards cards--3 blog-grid">
+          <article class="card blog-card" id="post-2">
+            <div class="card-media"><img class="blog-cover" src="images/seniors-playing-badminton-800.webp" width="800" height="533" alt="Older adults playing badminton in a sports hall" loading="lazy" decoding="async"></div>
+            <div class="card-kicker"><span class="badge">Staying active</span><time datetime="2026-09-30">30 Sep 2026</time></div>
+            <h3 class="card-title">Small movements, big gains: staying active after eighty</h3>
+            <p class="card-text">Why our Friday dance class is the loudest hour of the week, and what ten minutes of movement a day does for balance.</p>
+            <div class="author">
+              <img class="author-photo" src="images/portrait-activity-coordinator-cardigan-160.webp" width="160" height="160" alt="Portrait of Hannah Doyle" loading="lazy" decoding="async">
+              <span class="author-text"><span class="author-name">Hannah Doyle</span><span class="author-role">Activities Coordinator</span></span>
+            </div>
+            <a class="btn btn-secondary" href="#post-2" data-open-post="post-2" aria-haspopup="dialog">Read article <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card blog-card" id="post-3">
+            <div class="card-media"><img class="blog-cover" src="images/watering-plants-in-garden-800.webp" width="800" height="640" alt="Older woman watering potted plants beside a white garden swing" loading="lazy" decoding="async"></div>
+            <div class="card-kicker"><span class="badge">Resident voices</span><time datetime="2026-09-12">12 Sep 2026</time></div>
+            <h3 class="card-title">A year in the kitchen garden</h3>
+            <p class="card-text">Potatoes, runner beans and one very stubborn fig tree: a resident's diary of the seasons.</p>
+            <div class="author">
+              <img class="author-photo" src="images/portrait-older-man-white-beard-red-hat-160.webp" width="160" height="160" alt="Portrait of Walter Brennan" loading="lazy" decoding="async">
+              <span class="author-text"><span class="author-name">Walter Brennan</span><span class="author-role">Resident, Kitchen Garden Club</span></span>
+            </div>
+            <a class="btn btn-secondary" href="#post-3" data-open-post="post-3" aria-haspopup="dialog">Read article <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card blog-card" id="post-4">
+            <div class="card-media"><img class="blog-cover" src="images/nutritious-plate-eggs-and-greens-800.webp" width="800" height="544" alt="Plate of eggs, greens, tomatoes and avocado on a rustic table" loading="lazy" decoding="async"></div>
+            <div class="card-kicker"><span class="badge">Nutrition</span><time datetime="2026-08-28">28 Aug 2026</time></div>
+            <h3 class="card-title">Good food for every appetite</h3>
+            <p class="card-text">How our kitchen cooks for small appetites, soft diets and big Sunday lunches, all from one menu.</p>
+            <div class="author">
+              <img class="author-photo" src="images/portrait-man-grey-sweater-160.webp" width="160" height="160" alt="Portrait of Marco Bellini" loading="lazy" decoding="async">
+              <span class="author-text"><span class="author-name">Marco Bellini</span><span class="author-role">Head Chef</span></span>
+            </div>
+            <a class="btn btn-secondary" href="#post-4" data-open-post="post-4" aria-haspopup="dialog">Read article <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card blog-card" id="post-5">
+            <div class="card-media"><img class="blog-cover" src="images/friends-doing-jigsaw-puzzle-800.webp" width="800" height="450" alt="Three older friends doing a jigsaw puzzle on a coffee table" loading="lazy" decoding="async"></div>
+            <div class="card-kicker"><span class="badge">Memory care</span><time datetime="2026-08-09">9 Aug 2026</time></div>
+            <h3 class="card-title">Familiar things: calm days in memory care</h3>
+            <p class="card-text">Routines, jigsaws and the right kind of quiet: what helps a person living with dementia feel safe.</p>
+            <div class="author">
+              <img class="author-photo" src="images/portrait-doctor-in-garden-160.webp" width="160" height="160" alt="Portrait of Dr Priya Nair" loading="lazy" decoding="async">
+              <span class="author-text"><span class="author-name">Dr Priya Nair</span><span class="author-role">Dementia Care Lead</span></span>
+            </div>
+            <a class="btn btn-secondary" href="#post-5" data-open-post="post-5" aria-haspopup="dialog">Read article <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card blog-card" id="post-6">
+            <div class="card-media"><img class="blog-cover" src="images/woman-using-smartphone-in-garden-800.webp" width="800" height="800" alt="Older woman using a smartphone on a stone bench in a leafy garden" loading="lazy" decoding="async"></div>
+            <div class="card-kicker"><span class="badge">Staying connected</span><time datetime="2026-07-22">22 Jul 2026</time></div>
+            <h3 class="card-title">Video calls, voice notes and the family chat</h3>
+            <p class="card-text">Simple ways to stay close when you live miles away, and how our team helps with the technology.</p>
+            <div class="author">
+              <img class="author-photo" src="images/portrait-woman-plaid-blazer-160.webp" width="160" height="160" alt="Portrait of Laura Kent" loading="lazy" decoding="async">
+              <span class="author-text"><span class="author-name">Laura Kent</span><span class="author-role">Family Liaison</span></span>
+            </div>
+            <a class="btn btn-secondary" href="#post-6" data-open-post="post-6" aria-haspopup="dialog">Read article <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+          <article class="card blog-card" id="post-7">
+            <div class="card-media"><img class="blog-cover" src="images/couple-on-bench-overlooking-sea-800.webp" width="800" height="534" alt="Older couple seen from behind on a bench looking out over the sea" loading="lazy" decoding="async"></div>
+            <div class="card-kicker"><span class="badge">Outings</span><time datetime="2026-07-03">3 Jul 2026</time></div>
+            <h3 class="card-title">Sea air and fish and chips: our summer outings</h3>
+            <p class="card-text">A day at the coast, planned by residents for residents, with a minibus, two wheelchairs and a flask of tea.</p>
+            <div class="author">
+              <img class="author-photo" src="images/portrait-older-woman-pink-blouse-160.webp" width="160" height="160" alt="Portrait of Dorothy Hale" loading="lazy" decoding="async">
+              <span class="author-text"><span class="author-name">Dorothy Hale</span><span class="author-role">Resident, Outings Committee</span></span>
+            </div>
+            <a class="btn btn-secondary" href="#post-7" data-open-post="post-7" aria-haspopup="dialog">Read article <svg class="flip" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER (the one band on this page) ============ -->
+    <section class="section section--sand" id="journal-letter" aria-labelledby="letter-title">
+      <div class="container container-narrow">
+        <header class="intro intro--center">
+          <p class="eyebrow">The garden letter</p>
+          <h2 id="letter-title">New articles, once a month</h2>
+          <p>One short email with the latest journal pieces, the month's outings and the tea-room menu. No spam, and you can leave at any time.</p>
+        </header>
+        <div class="form-card letter-card">
+          <form class="form" data-validate novalidate data-success-message="Thank you. Your first garden letter arrives at the start of next month.">
+            <div class="form-grid">
+              <div class="field">
+                <label for="jn-name">Your name <span class="req" aria-hidden="true">*</span></label>
+                <input id="jn-name" name="name" type="text" autocomplete="name" placeholder="e.g. Mary Evans" required>
+              </div>
+              <div class="field">
+                <label for="jn-email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input id="jn-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="form-actions"><button class="btn btn-primary" type="submit">Send me the letter</button></div>
+            <p class="form-success" data-form-success role="status" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+              <span data-success-text>Thank you. You are on the list.</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ARTICLE DIALOG ============ -->
+    <dialog class="post-dialog" id="post-dialog" aria-labelledby="post-dialog-title">
+      <div class="post-dialog-inner">
+        <div class="post-dialog-top">
+          <div class="card-kicker" data-slot="kicker"></div>
+          <button class="post-dialog-close" type="button" data-close-dialog aria-label="Close article">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+        <figure class="post-dialog-cover" data-slot="cover"></figure>
+        <h2 class="post-dialog-title" id="post-dialog-title" data-slot="title"></h2>
+        <div class="post-dialog-author" data-slot="author"></div>
+        <div class="post-dialog-body" data-slot="body"></div>
+        <div class="post-dialog-foot"><button class="btn btn-secondary" type="button" data-close-dialog>Back to the journal</button></div>
+      </div>
+    </dialog>
+
+    <!-- Full article texts (shown in the dialog) -->
+    <template id="post-1-full">
+      <p>The first month is the hardest part of any move, and it is usually harder for the family than for the person moving in. After twelve years of welcoming new residents, I can promise you that the strange, unsettled feeling passes. Most people tell us that by week three, Thymewood has started to feel like theirs.</p>
+      <p>Bring less than you think, but bring the right things. A favourite chair, the bedside clock, a few framed photos and the blanket from the back of the sofa matter far more than a full wardrobe. We will hang pictures, set up the radio and label everything on the first afternoon, so the room looks lived in before bedtime.</p>
+      <p>Visit often, but keep visits short at first. Twenty minutes over a cup of tea every day does more good than one long, emotional afternoon a week. If your mum asks to come home, that is normal: acknowledge the feeling, talk about something she enjoyed that day, and tell her when you will be back.</p>
+      <p>We will call you at the end of the first week and again after a month to talk through how things are going: sleep, appetite, friendships, anything that worries you. And you can always ring me. No question is too small, and no call is a nuisance.</p>
+    </template>
+    <template id="post-2-full">
+      <p>Every Friday at half past two, the lounge chairs go back against the walls and the music goes up. Our seated dance class is the loudest hour of the week, and it is also one of the most useful. Moving to music builds strength, balance and confidence without ever feeling like exercise.</p>
+      <p>You do not need to run a marathon after eighty. Ten minutes of gentle movement each day, such as standing up from a chair five times, a slow walk to the garden or ankle circles during the news, makes a real difference to how steady people feel on their feet.</p>
+      <p>Our physiotherapist reviews everyone's mobility when they arrive and suggests a few simple movements to build into the day. We keep the goals personal: walking to the dining room without a frame, reaching the top shelf, getting down the garden to see the roses.</p>
+      <p>If you are visiting on a Friday, come and join in. Grandchildren are especially welcome. Nobody minds if you cannot keep time.</p>
+    </template>
+    <template id="post-3-full">
+      <p>I came to Thymewood with two suitcases and a packet of seed potatoes. Jo on reception laughed, but by April we had cleared a bed by the greenhouse, and the Kitchen Garden Club was born. There are nine of us now, plus a robin who supervises.</p>
+      <p>Spring is for planning and arguing about varieties. In May the runner beans go in against the old brick wall, and by July we are handing bowls of them to Marco in the kitchen. Nothing tastes quite like a bean you watched grow from your own window.</p>
+      <p>Autumn is apples and the fig tree. I have spent two years trying to get that fig to fruit properly, and this year it finally gave us eleven. We ate them with honey and cream, and I am not ashamed to say I had three.</p>
+      <p>Winter is quieter: seed catalogues, cups of tea in the greenhouse and plans for next year. If your father or mother loved their garden, tell them there is always a trowel waiting here.</p>
+    </template>
+    <template id="post-4-full">
+      <p>Appetites change as we get older. Some residents want three proper meals a day; others prefer five small ones and a slice of cake at four. Our job in the kitchen is to make sure everyone eats well, whatever their appetite or diet, without anyone feeling singled out.</p>
+      <p>We cook everything fresh on site, from one seasonal menu. The same shepherd's pie can be served as it is, made softer for someone who finds chewing difficult, or fortified with extra butter and cream for someone who needs to put weight back on. It looks the same on the plate, and that matters.</p>
+      <p>I meet every new resident in their first week to ask about favourite dishes, foods they cannot stand, and what their mother used to cook. Those conversations end up on the menu: Walter's beef stew, Dorothy's lemon drizzle, a proper curry on Thursdays.</p>
+      <p>Families are welcome to join any meal for a small charge. Sunday lunch is the busiest and, I think, the best.</p>
+    </template>
+    <template id="post-5-full">
+      <p>For someone living with dementia, the world can feel noisy and unpredictable. Much of our work in memory care is about making the day feel calm and familiar again, through steady routines, kind faces and spaces that make sense.</p>
+      <p>We keep the same small team of carers on each floor, so residents see faces they recognise. Meals are at the same times each day, the corridors are colour-coded, and every bedroom door carries a memory box with photos and keepsakes chosen with the family.</p>
+      <p>Activities are short, hands-on and done together: a jigsaw on the coffee table, folding warm laundry, sorting buttons, or listening to songs from the 1950s. These are not ways to pass the time. They give people a sense of purpose and often bring back memories and conversation.</p>
+      <p>If your parent has recently been diagnosed, please come and talk to us. We can explain what memory care looks like day to day, and how it can grow with them as their needs change.</p>
+    </template>
+    <template id="post-6-full">
+      <p>Not every family lives round the corner. Many of our residents have children across the country and grandchildren overseas, and staying in touch makes a huge difference to how settled and happy they feel.</p>
+      <p>Every floor has a tablet set up for video calls, and our team will book a quiet time, hold the screen and help with the buttons. Several residents now send voice notes to their grandchildren, which turns out to be much easier than typing on a small phone.</p>
+      <p>With your parent's permission, we can also add you to our private family updates. You will receive a short note and a photo or two each week: who came to tea, what they made in the craft room, how they are sleeping.</p>
+      <p>Old-fashioned ways still work beautifully too. We post letters every weekday, and the reception team reads cards aloud for anyone whose eyesight is failing.</p>
+    </template>
+    <template id="post-7-full">
+      <p>The Outings Committee meets on the first Monday of the month, and we take our job seriously. This summer we voted for the coast, and on a bright July morning fourteen of us set off in the minibus with two carers, two wheelchairs and a very large flask of tea.</p>
+      <p>The staff had planned everything: a bench with a view, accessible toilets nearby, a short level walk along the front and a table booked for fish and chips. Nobody had to worry about anything except whether to have mushy peas.</p>
+      <p>Some of us had not seen the sea in years. Margaret paddled with her shoes in her hand, and Frank told everyone about his first job on the pier in 1958. We were back for supper, tired and sunburnt and very pleased with ourselves.</p>
+      <p>Next on the list is the garden centre in September and a Christmas concert in town. If your relative would like to join the committee, the door is always open.</p>
+    </template>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="f-brand">
+        <a class="brand" href="index.html" aria-label="Thymewood Garden Residence, home">
+          <svg class="brand-mark" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false">
+            <circle cx="24" cy="24" r="24" class="mark-bg"/>
+            <path d="M24 37V20" class="mark-stem"/>
+            <path d="M24 29c-7.5 0-11-4.6-11-11 6.4 0 11 3.6 11 11z" class="mark-leaf"/>
+            <path d="M24 24.5c0-7.4 3.8-11.5 11-11.5 0 6.6-4 11.5-11 11.5z" class="mark-leaf2"/>
+            <circle cx="24" cy="11.5" r="2.6" class="mark-sun"/>
+          </svg>
+          <span class="brand-text"><span class="brand-name">Thymewood</span><span class="brand-tag">Garden Residence</span></span>
+        </a>
+        <p class="f-desc">Assisted living, nursing and memory care around two acres of walled gardens, for 64 residents and the families who love them.</p>
+        <ul class="f-contact">
+          <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>14 Orchard Lane, Stamford PE9 2TW</span></li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+441632960412"><span class="ltr-num">01632 960 412</span></a></li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:hello@thymewood.example">hello@thymewood.example</a></li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Visiting every day, 9:00 to 20:00</span></li>
+        </ul>
+        <form class="newsletter" data-validate novalidate data-success-message="Thank you. The next garden letter is on its way to you.">
+          <label for="nl-email">Our monthly garden letter</label>
+          <div class="nl-row">
+            <input id="nl-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+          <p class="form-success" data-form-success role="status" hidden><span data-success-text>Thank you for subscribing.</span></p>
+        </form>
+      </div>
+
+      <nav class="f-col" aria-labelledby="f-quick">
+        <h2 id="f-quick">Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="home-2.html">Home 2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="care-services.html">Care Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="f-col" aria-labelledby="f-care">
+        <h2 id="f-care">Care services</h2>
+        <ul>
+          <li><a href="care-services.html#nursing">Nursing care</a></li>
+          <li><a href="care-services.html#memory-care">Memory care</a></li>
+          <li><a href="care-services.html#daily-living">Help with daily living</a></li>
+          <li><a href="care-services.html#therapy">Physiotherapy</a></li>
+          <li><a href="care-services.html#respite">Respite stays</a></li>
+        </ul>
+      </nav>
+      <nav class="f-col" aria-labelledby="f-fac">
+        <h2 id="f-fac">Facilities</h2>
+        <ul>
+          <li><a href="facilities.html#suites">Garden suites</a></li>
+          <li><a href="facilities.html#dining">Dining room</a></li>
+          <li><a href="facilities.html#gardens">Walled gardens</a></li>
+          <li><a href="facilities.html#activities">Activities</a></li>
+          <li><a href="facilities.html#wellness">Wellness &amp; salon</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Thymewood Garden Residence. A fictional residence for demonstration.</p>
+      <ul class="legal-links"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul>
+      <ul class="social" aria-label="Thymewood on social media">
+        <li><a href="https://www.facebook.com/" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v7h4v-7h3l1-4h-4V8z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></a></li>
+        <li><a href="https://www.youtube.com/" aria-label="YouTube" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
