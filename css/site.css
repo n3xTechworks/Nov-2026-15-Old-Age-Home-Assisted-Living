@@ -212,6 +212,13 @@ html[data-theme="dark"] .brand-mark .mark-bg { fill: #3E7C53; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-name { font-family: var(--f-head); font-weight: 600; font-size: 1.4rem; letter-spacing: -0.01em; }
 .brand-tag { font-size: 1rem; color: var(--muted); margin-top: 2px; }
+/* tagline under the brand name: says what Thymewood is */
+.brand-line { font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--leaf-ink); margin-top: 4px; white-space: nowrap; }
+.site-footer .brand-line { color: var(--footer-muted); }
+/* very narrow phones (< 360px): slightly smaller tagline so the menu button stays on screen */
+@media (max-width: 359.98px) { .site-header .brand-line { font-size: .62rem; letter-spacing: .02em; } }
+/* small desktops: a slightly smaller tagline keeps the full navbar on one line */
+@media (min-width: 1024px) and (max-width: 1179.98px) { .site-header .brand-line { font-size: .64rem; letter-spacing: .03em; } }
 
 .nav { margin-inline-start: auto; }
 .nav-list { display: flex; align-items: center; gap: 2px; }
@@ -245,7 +252,7 @@ html[data-theme="dark"] .brand-mark .mark-bg { fill: #3E7C53; }
 .menu-toggle .i-close, .menu-toggle[aria-expanded="true"] .i-menu { display: none; }
 .menu-toggle[aria-expanded="true"] .i-close { display: block; }
 
-/* mobile menu: navigation links only (the controls stay in the header bar at every width) */
+/* mobile menu: navigation links (on phones the theme / RTL / CTA controls are moved in here) */
 .mobile-menu {
   position: absolute; inset-inline: 0; top: 100%;
   background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-lg);
@@ -274,14 +281,12 @@ html[data-theme="dark"] .brand-mark .mark-bg { fill: #3E7C53; }
   .header-actions .btn { padding-inline: 18px; }
   .brand-name { font-size: 1.3rem; }
 }
-/* phones: brand + menu on row 1, theme / RTL / CTA on row 2 (still only one place) */
+/* phones: brand + menu in the bar; theme / RTL / CTA are moved into the hamburger menu by js/site.js */
 @media (max-width: 639.98px) {
-  .header-inner { flex-wrap: wrap; row-gap: 0; column-gap: 12px; min-height: 0; padding-block: 10px; }
-  .menu-toggle { order: 2; margin-inline-start: auto; }
-  .header-actions {
-    order: 3; flex-basis: 100%; margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--line);
-  }
-  .header-actions .btn { margin-inline-start: auto; }
+  .header-inner { column-gap: 12px; min-height: 0; padding-block: 10px; }
+  .menu-toggle { margin-inline-start: auto; }
+  .mm-actions .header-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 16px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+  .mm-actions .header-actions .btn { flex: 1 1 100%; justify-content: center; }
   .brand-mark { width: 40px; height: 40px; }
   .brand-name { font-size: 1.25rem; }
 }
@@ -657,7 +662,8 @@ html[data-theme="dark"] .brand-mark .mark-bg { fill: #3E7C53; }
 .site-footer a:hover { text-decoration: underline; }
 .site-footer .brand { color: var(--footer-ink); }
 .site-footer .brand-tag { color: var(--footer-muted); }
-.site-footer .brand-mark .mark-bg { fill: #3E7C53; }
+/* footer logo mark uses the same colours as the header mark (rules above), so the logo is identical on every page */
+.brand-mark .mark-bg { stroke: none; } /* no outline ring around the logo mark (header and footer) */
 .footer-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) repeat(3, minmax(0, 1fr)); gap: 40px; align-items: start; }
 .f-brand { display: flex; flex-direction: column; gap: 16px; max-width: 440px; }
 .f-desc { color: var(--footer-muted); }

@@ -117,7 +117,7 @@ const ratio = (a, b) => { const [x, y] = [luminance(a), luminance(b)].sort((p, q
         const vis = el => { const rc = el.getBoundingClientRect(); const cs = getComputedStyle(el); return rc.width > 0 && rc.height > 0 && cs.visibility !== 'hidden' && cs.display !== 'none' && cs.opacity !== '0'; };
         const out = {};
         out.hscroll = document.documentElement.scrollWidth - window.innerWidth;
-        out.controls = ['[data-theme-toggle]', '[data-dir-toggle]', '[data-nav-cta]'].map(sel => [...document.querySelectorAll(sel)].filter(vis).length);
+        out.controls = ['[data-theme-toggle]', '[data-dir-toggle]', '[data-nav-cta]'].map(sel => [...document.querySelectorAll(sel)].filter(e => vis(e) || e.closest('[data-mobile-menu]')).length); /* phones: controls live in the hamburger menu (counted once) */
         const ctl = ['[data-theme-toggle]', '[data-dir-toggle]', '[data-nav-cta]'].map(sel => [...document.querySelectorAll(sel)].find(e => vis(e) && e.closest('#siteHeader') && !e.closest('[data-mobile-menu]')));
         out.ctlDims = ctl.filter(Boolean).map(e => { const rc = e.getBoundingClientRect(); return [Math.round(rc.height), getComputedStyle(e).borderTopLeftRadius]; });
         // card-row alignment: grid/flex-row containers whose visible children share a structure

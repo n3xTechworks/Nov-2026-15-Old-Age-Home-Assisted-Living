@@ -14,6 +14,11 @@
   .room-cards .card > * { grid-column: 1; }
 }
 .room-cards .meta { flex-wrap: wrap; }
+/* room features: three tiles across the full card width (icon above a one-line label). Tracks are sized to their label and
+   share the spare width, so labels never wrap and every icon and label sits on the same line in every card */
+.room-cards .meta { display: grid; grid-template-columns: repeat(3, auto); gap: 8px; align-items: stretch; }
+.room-cards .meta li { display: grid; grid-template-rows: 20px auto; justify-items: center; align-content: center; row-gap: 6px; padding: 12px 8px; text-align: center; border-radius: var(--r-md); background: var(--sage-soft); color: var(--ink); font-size: .8125rem; font-weight: 600; line-height: 1.2; white-space: nowrap; min-width: 0; }
+.room-cards .meta svg { width: 20px; height: 20px; display: block; }
 
 /* Activity cards with tall frames: keep a sensible height on wide screens */
 @media (min-width: 1024px) { .fac-tall .card-media--tall { aspect-ratio: 4 / 4.4; } }
